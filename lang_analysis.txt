@@ -1,0 +1,4 @@
+0000000035	english
+0000000007	german
+0000000001	griechisch
+0000000001	Latein

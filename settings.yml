@@ -1,0 +1,5 @@
+path_to_memex: .\_data\
+bib_all: .\_bib\\myBib.bib
+bibtex_keys: .\_bib\\bibtex_keys.yml
+language_keys: .\_bib\\bibtex_languages.yml
+path_to_poppler: .\_poppler\bin\
