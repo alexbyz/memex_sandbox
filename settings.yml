@@ -6,4 +6,3 @@ path_to_poppler: .\_poppler\bin\
 defaultLang: "eng"
 template_page: .\_template\template_page.html
 template_index: .\_template\template_index.html
-interface: .\_interface\index.html

@@ -33,16 +33,22 @@ def createIndex(pathToMemex):
         entry = entry.replace("@PATHTOPUBL@", path)
         entry = entry.replace("@CITEKEY@", k)
         if "author" in v: 
-            entry = entry.replace("@AUTHOR@", v["author"])
+            entry = entry.replace("@AUTHOR@", v["author"].replace("{",""))
+        else:
+            entry = entry.replace("@AUTHOR@", "MISSING")
         if "date" in v: 
             entry = entry.replace("@DATE@", v["date"])
+        else:
+            entry = entry.replace("@DATE@", "MISSING")
         if "title" in v: 
-            entry = entry.replace("@TITLE@", v["title"])
+            entry = entry.replace("@TITLE@", v["title"].replace("{",""))
+        else:
+            entry = entry.replace("@TITLE@", "MISSING")
         complete = complete + entry + "\n"
     
     template = template.replace("@MAINCONTENT@", complete)
     
-    with open("Index.html", "w", encoding="utf8") as f9:
+    with open("index.html", "w", encoding="utf8") as f9:
         f9.write(template)
 
 def processAllEntries(pathToMemex):
@@ -53,9 +59,7 @@ def processAllEntries(pathToMemex):
         
         path = functions.generatePublPath(memexPath, k)
         path = path + "\\" + k +".bib" 
-        huber_interface_functions.generatePublicationInterface(k, path)
+        huber_interface_functions.generatePublicationInterface(k, path)    
 
-    
-
-#processAllEntries(memexPath)
+processAllEntries(memexPath)
 createIndex(memexPath)
