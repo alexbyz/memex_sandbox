@@ -23,7 +23,7 @@ def createIndex(pathToMemex):
     with open(settings["template_index"], "r", encoding="utf8") as ft:
         template = ft.read()
 
-    complete =""
+    completeList = []
 
     for k,v in bibData.items():         
         path = functions.generatePublPath(memexPath, k)     
@@ -33,7 +33,7 @@ def createIndex(pathToMemex):
         entry = entry.replace("@PATHTOPUBL@", path)
         entry = entry.replace("@CITEKEY@", k)
         if "author" in v: 
-            entry = entry.replace("@AUTHOR@", v["author"].replace("{",""))
+            entry = entry.replace("@AUTHOR@", v["author"])
         else:
             entry = entry.replace("@AUTHOR@", "MISSING")
         if "date" in v: 
@@ -41,12 +41,17 @@ def createIndex(pathToMemex):
         else:
             entry = entry.replace("@DATE@", "MISSING")
         if "title" in v: 
-            entry = entry.replace("@TITLE@", v["title"].replace("{",""))
+            entry = entry.replace("@TITLE@", v["title"])
         else:
             entry = entry.replace("@TITLE@", "MISSING")
-        complete = complete + entry + "\n"
+
+        completeList.append(entry)
+
+    content = "\n<ul>\n%s\n</ul>" % "\n".join(sorted(completeList))
+    content = content.replace("{","")
+    content = content.replace("}","")
     
-    template = template.replace("@MAINCONTENT@", complete)
+    template = template.replace("@MAINCONTENT@", content)
     
     with open("index.html", "w", encoding="utf8") as f9:
         f9.write(template)

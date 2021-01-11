@@ -132,3 +132,28 @@ def loadBib(bibTexFile):
 # generate path from bibtex code, and create a folder, if does not exist;
 # if the code is `SavantMuslims2017`, the path will be pathToMemex+`/s/sa/SavantMuslims2017/`
 
+# creates a dictionary of citationKey:Path pairs for a relevant type of files
+def dicOfRelevantFiles(pathToMemex, extension):
+    dic = {}
+    for subdir, dirs, files in os.walk(pathToMemex):
+        for file in files:
+            # process publication tf data
+            if file.endswith(extension):
+                key = file.replace(extension, "")
+                value = os.path.join(subdir, file)
+                dic[key] = value
+    return(dic)
+
+def filterDic(dic, thold): 
+
+    retDic = {}    #empty Dictonary to copy filterd values into
+
+    for k,v in dic.items():     #loop through outer first dic, containig the titles
+        retDic[k]={}            #create a subDic for each title
+
+        for key,val in v.items():   #loop through the entries of each title
+            if val > thold:         #check threshold                            
+                if k != key:        #check to not match the publication with itself
+                    retDic[k][key] = val    #add value
+
+    return(retDic)

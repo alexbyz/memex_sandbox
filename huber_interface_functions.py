@@ -109,3 +109,4 @@ def dicOfRelevantFiles(pathToMemex, extension):
                 value = os.path.join(subdir, file)
                 dic[key] = value
     return(dic)
+
