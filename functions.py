@@ -157,3 +157,13 @@ def filterDic(dic, thold):
                     retDic[k][key] = val    #add value
 
     return(retDic)
+
+def createWordCloud(savePath, tfIdfDic):
+    wc = WordCloud(width=1000, height=600, background_color="white", random_state=2,
+                   relative_scaling=0.5, colormap="gray") 
+    wc.generate_from_frequencies(tfIdfDic)
+    # plotting
+    plt.imshow(wc, interpolation="bilinear")
+    plt.axis("off")
+    #plt.show() # this line will show the plot
+    plt.savefig(savePath, dpi=200, bbox_inches='tight')

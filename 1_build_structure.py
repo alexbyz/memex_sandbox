@@ -25,6 +25,7 @@ def loadBib(bibTexFile):
 
         for record in records[1:]:              #loop through all of them
             # let process ONLY those records that have PDFs
+            
             if ".pdf" in record.lower():
                 completeRecord = "\n@" + record #adds an newline and @ at the beginning
 
