@@ -64,5 +64,12 @@ def createResultsPage(results, seachArgument):
         with open("search.html", "w", encoding="utf8") as f9:
             f9.write(pageTemp)
 
-results = search("Ambrose")
-createResultsPage(results, "Ambrose")
+print("="*80)
+searchWord = str(input("="*80 + "SEARCH:   "))
+results = search(searchWord)
+print("creating html page for search")
+createResultsPage(results, searchWord)
+print("="*80)
+
+results = search(searchWord)
+createResultsPage(results, searchWord)
