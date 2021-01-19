@@ -47,8 +47,12 @@ def createResultsPage(results, seachArgument):
         for k, v in results.items():            
             content = content + "\n" + '<button class="collapsible">@CITEKEY@</button> <div class="content"> <ul>'.replace("@CITEKEY@", k + " (%d Pages with results)" %len(results[k].keys()))            
             for key, val in v.items():
-                element = '<li><b><hr>(pdfPage: @PDFPAGE@)</b><hr> <span class='"searchResult"'>@SEARCHARGUMENT@</span><br> <hr> <a href="@PAGELINK@"><i>go to the original page...</i></a> </li>'.replace("@SEARCHARGUMENT@", seachArgument)
-                element = element.replace("@PDFPAGE@", key)
+                element = '<li><b><hr>(pdfPage: @PDFPAGE@)</b><hr> <span class='"searchResult"'></span>@CONTENT@<br> <hr> <a href="@PAGELINK@"><i>go to the original page...</i></a> </li>'.replace("@PDFPAGE@", key)
+
+                text = val["result"].replace("\n", "<br>")
+                text = text.replace(seachArgument, "<b style="'color:red'">"+seachArgument+"</style></b>")
+
+                element = element.replace("@CONTENT@", text)
                 element = element.replace("@PAGELINK@", val["pathToPage"])
 
                 content = content + element
