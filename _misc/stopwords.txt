@@ -1,3 +1,10 @@
+ep
+epp
+vienna
+jstor
+utc
+edn
+doi
 aber
 alle
 allem
