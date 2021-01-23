@@ -3,9 +3,26 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>MEMEX SANDBOX</title>
+<title>MEMEX SANDBOX: </title>
 <meta name="description" content="MEMEX SANDBOX">
 <link rel="stylesheet" type="text/css" href="./_misc/style.css">
+<script type="text/javascript" src="./_misc/index.js"></script>
+
+<!-- Activating Data Table Filtering -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('table.display').DataTable({
+          "pageLength": 25
+        });
+    });
+</script>
+
+
+<!--ADDITIONALFUNCTIONALITYELEMENTS-->
 
 </head>
 <body>
@@ -28,10 +45,43 @@
   <!-- TOPFILE -->
 
   
+<button class="collapsible">SAVED SEARCHES</button>
+<div class="content">
+<table id="" class="display" width="100%">
+<thead>
+    <tr>
+        <th><i>link</i></th>
+        <th>search string</th>
+        <th># of publications with matches</th>
+        <th>time stamp</th>
+    </tr>
+</thead>
+
+<tbody>
+<tr> <td><a href="_data\searches\Balkan.html"><i>read</i></a></td> <td><div class="searchString">Balkan</div></td> <td>15</td> <td>2021-01-22 18:20:42</td></tr>
+<tr> <td><a href="_data\searches\Demetrius.html"><i>read</i></a></td> <td><div class="searchString">Demetrius</div></td> <td>9</td> <td>2021-01-22 18:30:12</td></tr>
+<tr> <td><a href="_data\searches\Thessaloniki.html"><i>read</i></a></td> <td><div class="searchString">Thessaloniki</div></td> <td>13</td> <td>2021-01-22 18:21:13</td></tr>
+</tbody>
+
+</table>
+</div>
+
+  
+<button class="collapsible">PUBLICATIONS</button>
+<div class="content">
+<table id="" class="display" width="100%">
+<thead>
+    <tr>
+        <th><i>PUBLICATIONS</i></th>
+
+    </tr>
+</thead>
+
+<tbody>
+
 <ul>
 <li><a href=.\_data\a\am\AmbrosiusOfMilanEpistula/pages/DETAILS.html>[AmbrosiusOfMilanEpistula]</a> Ambrosius of Milan (MISSING) - <i>Epistula 74 (MAUR40)  Epistulae Extra Collectionem 1a</i></li>
 <li><a href=.\_data\b\ba\BaileyBuilding2003/pages/DETAILS.html>[BaileyBuilding2003]</a> Bailey, Lisa Kaaren (2003) - <i>Building Urban Christian Communities: Sermons on Local Saints in the Eusebius Gallicanus Collection</i></li>
-<li><a href=.\_data\b\ba\BaileyChristianity2010/pages/DETAILS.html>[BaileyChristianity2010]</a> Bailey, Lisa Kaaren (2010) - <i>Christianity's Quiet Success: The Eusebius Gallicanus Sermon Collection and the Power of the Church in Late Antique Gaul</i></li>
 <li><a href=.\_data\b\ba\BaileyScripture2018/pages/DETAILS.html>[BaileyScripture2018]</a> Bailey, Lisa Kaaren (2018) - <i>Scripture in the Sermons of Caesarius of Arles</i></li>
 <li><a href=.\_data\b\ba\BarthIntroduction1969/pages/DETAILS.html>[BarthIntroduction1969]</a> Barth, Frederik (1969) - <i>Introduction</i></li>
 <li><a href=.\_data\b\be\BellHow2016/pages/DETAILS.html>[BellHow2016]</a> Bell, Peter (2016) - <i>How the Circus and Theatre Factions Could Help Prevent Civil War</i></li>
@@ -41,6 +91,7 @@
 <li><a href=.\_data\b\br\BratherArchaologie2008/pages/DETAILS.html>[BratherArchaologie2008]</a> Brather, Sebastian (2008) - <i>Archäologie Der Westlichen Slawen: Siedlung Wirtschaft Und Gesellschaft Im Früh- Und Hochmittelalterlichen Ostmitteleuropa</i></li>
 <li><a href=.\_data\b\br\BratherEthnic/pages/DETAILS.html>[BratherEthnic]</a> Brather, Sebastian (MISSING) - <i>Ethnic Identities as Constructions of Archaeology: The Case of the Alamanni - Universit\&\#228;t Wien</i></li>
 <li><a href=.\_data\b\br\BrownDecline2000/pages/DETAILS.html>[BrownDecline2000]</a> Brown, Peter (2000) - <i>The Decline of the Empire of God: Amnesty Penance and the Afterlife from Late Antiquity to the Middle Ages</i></li>
+<li><a href=.\_data\b\br\BrownSociety1975/pages/DETAILS.html>[BrownSociety1975]</a> Brown, Peter (1975) - <i>Society and the Supernatural: A Medieval Change</i></li>
 <li><a href=.\_data\c\ca\CameronImages1979/pages/DETAILS.html>[CameronImages1979]</a> Cameron, Averil (1979) - <i>Images of Authority: Elites and Icons in Late Sixth-Century Byzantium</i></li>
 <li><a href=.\_data\c\ca\CameronJustin2001/pages/DETAILS.html>[CameronJustin2001]</a> Cameron, Averil (2001) - <i>Justin I and Justinian</i></li>
 <li><a href=.\_data\c\ce\CekalovaNika1991/pages/DETAILS.html>[CekalovaNika1991]</a> Čekalova, Alexandra A. (MISSING) - <i>Der Nika Aufstand</i></li>
@@ -60,8 +111,10 @@
 <li><a href=.\_data\m\ma\MaximusTaurinensisMaximi1962/pages/DETAILS.html>[MaximusTaurinensisMaximi1962]</a> Maximus Taurinensis (1962) - <i>Maximi Episcopi Tavrinensis sermones : collectionem sermonvm antiqvam nonnvllis sermonibvs extravagantibvs adiectis</i></li>
 <li><a href=.\_data\m\mc\McCormickEmperor2001/pages/DETAILS.html>[McCormickEmperor2001]</a> McCormick, Michael (2001) - <i>Emperor and Court</i></li>
 <li><a href=.\_data\m\mc\McCormickEthernal1986/pages/DETAILS.html>[McCormickEthernal1986]</a> McCormick, Michael (1986) - <i>Ethernal Victory: Triumphal Rulership in Late Antiquity Byzantium and the Early Medieval West</i></li>
+<li><a href=.\_data\m\mc\McKeeUncommon2010/pages/DETAILS.html>[McKeeUncommon2010]</a> McKee, Sally (2010-11-24) - <i>Uncommon Dominion: Venetian Crete and the Myth of Ethnic Purity</i></li>
 <li><a href=.\_data\m\me\MeierAndere2004/pages/DETAILS.html>[MeierAndere2004]</a> Meier, Mischa (2004) - <i>Das andere Zeitalter Justinians : Kontingenzerfahrung und Kontingenzbewältigung im 6. Jahrhundert n. Chr.</i></li>
 <li><a href=.\_data\n\na\NagelConstructing1994/pages/DETAILS.html>[NagelConstructing1994]</a> Nagel, Joane (1994) - <i>Constructing Ethnicity: Creating and Recreating Ethnic Identity and Culture</i></li>
+<li><a href=.\_data\n\no\Nomen2008/pages/DETAILS.html>[Nomen2008]</a> MISSING (2008-03-18) - <i>Nomen et Fraternitas: Festschrift für Dieter Geuenich zum 65. Geburtstag</i></li>
 <li><a href=.\_data\o\ob\ObolenskyCult1974/pages/DETAILS.html>[ObolenskyCult1974]</a> Obolensky, Dimitri (1974) - <i>The Cult of St. Demetrius of Thessaloniki in the History of Byzantine-Slav Relations</i></li>
 <li><a href=.\_data\p\pf\PfeilschifterKaiser2013/pages/DETAILS.html>[PfeilschifterKaiser2013]</a> Pfeilschifter, Rene (2013) - <i>Der Kaiser und Konstantinopel: Kommunikation und Konfliktaustrag in einer spätantiken Metropole</i></li>
 <li><a href=.\_data\p\po\PohlIntroduction2018/pages/DETAILS.html>[PohlIntroduction2018]</a> Pohl, Walter (2018) - <i>Introduction: Early Medieval Romanness - a Multiple Identity</i></li>
@@ -74,8 +127,14 @@
 <li><a href=.\_data\w\we\WenskusStammesbildung1961/pages/DETAILS.html>[WenskusStammesbildung1961]</a> Wenskus, Reinhard (1961) - <i>Stammesbildung und Verfassung: Das Werden der frühmittelalterlichen gentes</i></li>
 <li><a href=.\_data\w\wh\WhitbyChronicon1989/pages/DETAILS.html>[WhitbyChronicon1989]</a> MISSING (1989) - <i>Chronicon Paschale</i></li>
 <li><a href=.\_data\w\wi\WiemerAkklamationen2004/pages/DETAILS.html>[WiemerAkklamationen2004]</a> Wiemer, Hans-Ulrich (2004) - <i>Akklamationen im spätrömischen Reich: Zur Typologie und Funktion eines Kommunikationsrituals</i></li>
+<li><a href=.\_data\w\wo\WolframAnfaenge2014/pages/DETAILS.html>[WolframAnfaenge2014]</a> Wolfram, Herwig (2014-06-01) - <i>Die Anfänge Bayerns im Zwielicht</i></li>
 <li><a href=.\_data\z\ze\ZelleZelle/pages/DETAILS.html>[ZelleZelle]</a> Zelle (MISSING) - <i>Zelle 2017 - Python Programming.Pdf</i></li>
 </ul>
+</tbody>
+
+</table>
+</div>
+
 
   <!-- BOTFILE -->
 

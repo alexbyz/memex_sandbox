@@ -23,7 +23,7 @@ def createAll(filename):
 
     for k, v in docData.items():
         savePath = functions.generatePublPath(memexPath, k)
-        savePath = savePath + "\\" + k
+        savePath = savePath + "\\wordcloud"
         if v:
             createWordCloud(savePath, v)
 

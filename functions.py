@@ -167,3 +167,4 @@ def createWordCloud(savePath, tfIdfDic):
     plt.axis("off")
     #plt.show() # this line will show the plot
     plt.savefig(savePath, dpi=200, bbox_inches='tight')
+
