@@ -38,16 +38,18 @@ searchesTemplate = """
 </table>
 </div>
 """
-
+#the <th> parts are the table headers -> they get displayed on top  of the table
+#each coresponds to a <td> table data (i guess) with the respective contend
 publTemplate = """
 <button class="collapsible">PUBLICATIONS</button>
 <div class="content">
 <table id="" class="display" width="100%">
 <thead>
     <tr>
-        <th><i>link</i></th>
-        <th>CiteKey</th>
-        <th>Author</th>
+        <th><i>link</i></th> 
+        <th>author</th>
+        <th>date</th>
+        <th>title</th>
     </tr>
 </thead>
 
@@ -76,7 +78,7 @@ def createIndex(pathToMemex):
     for k,v in bibData.items():         
         path = functions.generatePublPath(memexPath, k)     
     	
-        entry = "<li><a href="+"@PATHTOPUBL@/pages/DETAILS.html"+">[@CITEKEY@]</a> @AUTHOR@ (@DATE@) - <i>@TITLE@</i></li>"
+        entry = "<tr><td><li><a href="+"@PATHTOPUBL@/pages/DETAILS.html>"+"[@CITEKEY@]</a></td><td> @AUTHOR@</td> <td>(@DATE@)</td> - <td><i>@TITLE@</i></td></li></tr>" #here I added the <td> in
 
         entry = entry.replace("@PATHTOPUBL@", path)
         entry = entry.replace("@CITEKEY@", k)
@@ -92,17 +94,18 @@ def createIndex(pathToMemex):
             entry = entry.replace("@TITLE@", v["title"])
         else:
             entry = entry.replace("@TITLE@", "MISSING")
+        
+        completeList.append(entry)  #print each entry into a list
 
-        completeList.append(entry)
-
-    content = "\n<ul>\n%s\n</ul>" % "\n".join(sorted(completeList))
+    content = "\n<ul>\n%s\n</ul>" % "\n".join(sorted(completeList)) #convert the whole contend to a string
     content = content.replace("{","")
     content = content.replace("}","")
 
-    toc = formatSearches(pathToMemex)
+    toc = formatSearches(pathToMemex)   #table of contend for all the searches html files is allready prepared by Prof
     template = template.replace("@SEARCHES@", toc)
 
-    template = template.replace("@PUBLICATIONS@", completeList)
+    #table for publications
+    template = template.replace("@PUBLICATIONS@", publTemplate.replace("@TABLECONTENTS@", content)) #publTable is analog to Profs searchesTemplate. I put all the publications in 
     
     with open("index.html", "w", encoding="utf8") as f9:
         f9.write(template)
