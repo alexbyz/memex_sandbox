@@ -5,6 +5,7 @@ import yaml
 import os, json, re
 
 import functions
+import textwrap
 
 settingsFile = "./settings.yml"
 settings = yaml.load(open(settingsFile))
@@ -12,6 +13,23 @@ settings = yaml.load(open(settingsFile))
 memexPath = settings["path_to_memex"]
 language = settings["language_keys"]
 defaultLang = settings["defaultLang"]
+
+simTemplate = """
+<table id="" class="display" width="100%">
+<thead>
+    <tr>
+        <th><i>link</i></th> 
+        <th>Sim</th>
+        <th>Publication</th>
+    </tr>
+</thead>
+
+<tbody>
+@TABLECONTENTS@
+</tbody>
+
+</table>
+"""
 
 def generatePublicationInterface(citeKey, pathToBibFile):
     print("="*80)
@@ -52,9 +70,12 @@ def generatePublicationInterface(citeKey, pathToBibFile):
             else:
                 mainElement = bibForHTML.replace("\n", "<br> ")
                 mainElement = '<div class="bib">%s</div>' % mainElement
-                mainElement += '\n<img src="wordcloud.jpg" width="100%" alt="wordcloud">'
+                mainElement += '\n<img src="../wordcloud.png" width="60%" alt="wordcloud">'
                 pageTemp = pageTemp.replace("@MAINELEMENT@", mainElement)
                 pageTemp = pageTemp.replace("@OCREDCONTENT@", "")
+
+                pageTemp = pageTemp.replace("@CONNECTEDTEXTS@", simTemplate.replace("@TABLECONTENTS@", genConnectedTexts(citeKey)))
+                
 
             # @NEXTPAGEHTML@ and @PREVIOUSPAGEHTML@
             if k == "DETAILS":
@@ -110,3 +131,20 @@ def dicOfRelevantFiles(pathToMemex, extension):
                 dic[key] = value
     return(dic)
 
+def genConnectedTexts(citeKey):  
+    similarities = json.load(open("cosineTableDic_filtered.txt", "r", encoding="utf8"))
+    contentTemp = "<tr><td><i><a href='@link@'>read</a></i></td><td>@Sim@</td><td>@Publication@</td></tr>"
+    
+    if similarities:
+        temp = similarities[citeKey]
+        content = ""
+    
+        for k,v in temp.items():
+            content = content + contentTemp.replace("@Publication@", k)
+            content = content.replace("@Sim@", str(v))
+            link = "..\\..\\..\\..\\." + functions.generatePublPath(memexPath, k) + "\\pages\\DETAILS.html"
+            content = content.replace("@link@", link)
+            
+        
+
+    return(content)
