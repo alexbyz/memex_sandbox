@@ -50,6 +50,7 @@ def generatePublicationInterface(citeKey, pathToBibFile):
         bibFile = pathToBibFile
         bibDic = functions.loadBib(bibFile)
         bibForHTML = prettifyBib(bibDic[citeKey]["complete"])
+        
 
         orderedPages = list(pageDic.keys())
 
