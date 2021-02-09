@@ -4,6 +4,7 @@ import os, json
 import pdf2image, pytesseract
 import PyPDF2  
 import yaml, re
+from datetime import datetime
 
 settingsFile = "./settings.yml"
 settings = yaml.load(open(settingsFile))
@@ -167,4 +168,86 @@ def createWordCloud(savePath, tfIdfDic):
     plt.axis("off")
     #plt.show() # this line will show the plot
     plt.savefig(savePath, dpi=200, bbox_inches='tight')
+
+def loadMultiLingualStopWords(listOfLanguageCodes):
+    print(">> Loading stopwords...")
+    stopwords = []
+    pathToFiles = settings["stopwords"]
+    codes = json.load(open(os.path.join(pathToFiles, "languages.json"), encoding="utf8"))
+
+    for l in listOfLanguageCodes:
+        with open(os.path.join(pathToFiles, codes[l]+".txt"), "r", encoding="utf8") as f1:
+            lang = f1.read().strip().split("\n")
+            stopwords.extend(lang)
+
+    stopwords = list(set(stopwords))
+    print("\tStopwords for: ", listOfLanguageCodes)
+    print("\tNumber of stopwords: %d" % len(stopwords))
+    #print(stopwords)
+    return(stopwords)
+
+# creates a list of paths to files of a relevant type
+def listOfRelevantFiles(pathToMemex, extension):
+    listOfPaths = []
+    for subdir, dirs, files in os.walk(pathToMemex):
+        for file in files:
+            # process publication tf data
+            if file.endswith(extension):
+                path = os.path.join(subdir, file)
+                listOfPaths.append(listOfPaths)
+    return(listOfPaths)
+
+def memexStatusUpdates(pathToMemex, fileType):
+    # collect stats
+    NumberOfPublications = len(listOfRelevantFiles(pathToMemex, ".pdf")) # PDF is the main measuring stick
+    NumberOfCountedItems = len(listOfRelevantFiles(pathToMemex, fileType))
+
+    currentTime = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
+    # check if dictionary exists
+    dicFile = os.path.join(pathToMemex, "memex.status")
+    if os.path.isfile(dicFile):
+        dic = json.load(open(dicFile, encoding="utf8"))
+    else:
+        dic = {}
+
+    dic[fileType] = {}
+    dic[fileType]["files"] = NumberOfCountedItems
+    dic[fileType]["pdfs"] = NumberOfPublications
+    dic[fileType]["time"] = currentTime
+
+    # save dic
+    with open(dicFile, 'w', encoding='utf8') as f9:
+        json.dump(dic, f9, sort_keys=True, indent=4, ensure_ascii=False)
+
+    print("="*40)
+    print("Memex Stats have been updated for: %s" % fileType)
+    print("="*40)
+
+# the function will quickly remove all files with a certain
+# extension --- useful when messing around and need to delete
+# lots of temporary files
+
+# HTML: generates TOCs for each page; the current page is highlighted with red
+def generatePageLinks(pNumList):
+    listMod = ["DETAILS"]
+    listMod.extend(pNumList)
+
+    toc = []
+    for l in listMod:
+        toc.append('<a href="%s.html">%s</a>' % (l, l))
+    toc = " ".join(toc)
+
+    pageDic = {}
+    for l in listMod:
+        pageDic[l] = toc.replace('>%s<' % l, ' style="color: red;">%s<' % l)
+
+    return(pageDic)
+
+# HTML: makes BIB more HTML friendly
+def prettifyBib(bibText):
+    bibText = bibText.replace("{{", "").replace("}}", "")
+    bibText = re.sub(r"\n\s+file = [^\n]+", "", bibText)
+    bibText = re.sub(r"\n\s+abstract = [^\n]+", "", bibText)
+    return(bibText)
 

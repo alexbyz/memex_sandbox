@@ -36,7 +36,7 @@ def searchOCRresults(pathToMemex, searchString):
                 a = citationKey.lower()
                 relPath = os.path.join(a[:1], a[:2], citationKey, "pages", "%s.html" % pageNumber)
                 countM = len(re.findall(r"\b%s\b" % searchString, pageText, flags=re.IGNORECASE))
-                pageWithHighlights = re.sub(r"\b(%s)\b" % searchString, r"<span class='searchResult'>\1</span>", pageText, flags=re.IGNORECASE)
+                pageWithHighlights = re.sub(r"\b(%s)\b" % searchString, r"<span class='searchResult'><i style='color:red'>\1</i></span>", pageText, flags=re.IGNORECASE)
 
                 results[citationKey][pageNumber] = {}
                 results[citationKey][pageNumber]["pathToPage"] = relPath
@@ -66,9 +66,13 @@ def searchOCRresults(pathToMemex, searchString):
 # RUN THE MAIN CODE #######################################
 ###########################################################
 
-#searchPhrase  = r"Balkan"
-#searchPhrase  = r"Thessaloniki"
-searchPhrase  = r"Demetrius"
+#searchPhrase  = r"\b(b|B)alkan\b"
+#searchPhrase  = r"\b(T|t)hessaloniki\b"
+#searchPhrase  = r"\bDemetrius\b"
+#searchPhrase  = r"\b(n|N)ika\b"
+#searchPhrase  = r"(Kaiser|emperor)"
+#searchPhrase  = r"acclamation"
+
 
 searchOCRresults(settings["path_to_memex"], searchPhrase)
 

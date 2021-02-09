@@ -7,6 +7,11 @@ defaultLang: "eng"
 template_page: .\_template\template_page.html
 template_index: .\_template\template_index.html
 template_search: .\_template\template_search.html
+content_index: .\_template\content_index.html
 ngram_range: (1,1)
 min_df: 5
 max_df: 0.5
+tfidf_publ: results_tfidf_publications.dataJson
+publ_cosDist: results_cosineDist_publications.dataJson
+page_cosDist: results_cosineDist_pages.dataJson
+ocr_results: .json

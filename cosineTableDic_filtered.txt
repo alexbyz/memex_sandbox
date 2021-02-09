@@ -6,23 +6,21 @@
         "McCormickEmperor2001": 0.25681084503039764
     },
     "BaileyBuilding2003": {
-        "BaileyScripture2018": 0.30784985737666803
+        "BaileyScripture2018": 0.30785499173365294
     },
     "BaileyScripture2018": {
-        "BaileyBuilding2003": 0.30784985737666803
+        "BaileyBuilding2003": 0.30785499173365294
     },
     "BarthIntroduction1969": {
         "BratherEthnic": 0.3768912894456915,
         "NagelConstructing1994": 0.6307484794520576
     },
     "BellHow2016": {
-        "BratherArchaologie2008": 0.3061747838883158,
-        "DiefenbachFrommigkeit1996": 0.32684732410851497,
-        "MattheisTransformation2014": 0.257340681361388,
-        "MeierAndere2004": 0.32789467695383395,
-        "Nomen2008": 0.3019732514865131,
-        "PfeilschifterKaiser2013": 0.29761585998987167,
-        "WenskusStammesbildung1961": 0.2860289965826905
+        "BratherArchaologie2008": 0.3083888942569836,
+        "DiefenbachFrommigkeit1996": 0.3045726065610256,
+        "MeierAndere2004": 0.2724459956298425,
+        "Nomen2008": 0.26700963410460804,
+        "PfeilschifterKaiser2013": 0.2722332648220578
     },
     "BergerEncyclopedic1953": {},
     "BourdieuOutline1977": {
@@ -31,12 +29,12 @@
         "McCormickEmperor2001": 0.25983078324443937
     },
     "BratherArchaologie2008": {
-        "BellHow2016": 0.3061747838883158,
-        "DiefenbachFrommigkeit1996": 0.2763603415621515,
-        "MeierAndere2004": 0.25477833553729723,
-        "Nomen2008": 0.4051800859370424,
-        "PfeilschifterKaiser2013": 0.25474220584628676,
-        "WenskusStammesbildung1961": 0.3313206340017608
+        "BellHow2016": 0.3083888942569836,
+        "DiefenbachFrommigkeit1996": 0.27727058132972593,
+        "MeierAndere2004": 0.313581417430464,
+        "Nomen2008": 0.44652243506716427,
+        "PfeilschifterKaiser2013": 0.2557311520518988,
+        "WenskusStammesbildung1961": 0.38849719568850144
     },
     "BratherEthnic": {
         "BarthIntroduction1969": 0.3768912894456915,
@@ -51,20 +49,19 @@
         "McCormickEmperor2001": 0.3887664039628897
     },
     "CekalovaNika1991": {
-        "MeierAndere2004": 0.2519604550745175,
-        "PfeilschifterKaiser2013": 0.3334017762363641
+        "MeierAndere2004": 0.2612645764991311,
+        "PfeilschifterKaiser2013": 0.3254188702951208
     },
     "CharanisKouver1970": {},
     "DennisMauricii1981": {},
     "DiefenbachFrommigkeit1996": {
-        "BellHow2016": 0.32684732410851497,
-        "BratherArchaologie2008": 0.2763603415621515,
-        "MattheisTransformation2014": 0.29742289631127533,
-        "MeierAndere2004": 0.3809135725247705,
-        "Nomen2008": 0.2916118651739688,
-        "PfeilschifterKaiser2013": 0.505778753512196,
-        "WenskusStammesbildung1961": 0.28433116668308756,
-        "WiemerAkklamationen2004": 0.3475513872534472
+        "BellHow2016": 0.3045726065610256,
+        "BratherArchaologie2008": 0.27727058132972593,
+        "MattheisTransformation2014": 0.2715308819013741,
+        "MeierAndere2004": 0.35913034771639796,
+        "Nomen2008": 0.2651238230408309,
+        "PfeilschifterKaiser2013": 0.4901235355107398,
+        "WiemerAkklamationen2004": 0.3235366187920916
     },
     "DzinoBecoming2010": {},
     "ENOLetters1989": {},
@@ -85,19 +82,17 @@
         "PohlIntroduction2018": 0.3008335862861679
     },
     "JohannesMalalasChronicle2017": {
-        "WhitbyChronicon1989": 0.3850315453875868
+        "WhitbyChronicon1989": 0.3850316028832749
     },
     "LiebeschuetzGovernment2000": {
         "SkedrosSt1996": 0.27910902021926837
     },
     "MattheisTransformation2014": {
-        "BellHow2016": 0.257340681361388,
-        "DiefenbachFrommigkeit1996": 0.29742289631127533,
-        "MeierAndere2004": 0.416496595513535,
-        "Nomen2008": 0.3820159820496794,
-        "PfeilschifterKaiser2013": 0.4507871308797938,
-        "WenskusStammesbildung1961": 0.3135576644631691,
-        "WiemerAkklamationen2004": 0.3562785647959716
+        "DiefenbachFrommigkeit1996": 0.2715308819013741,
+        "MeierAndere2004": 0.35002150365369056,
+        "Nomen2008": 0.29262065671456344,
+        "PfeilschifterKaiser2013": 0.43158308239151044,
+        "WiemerAkklamationen2004": 0.3146536699770502
     },
     "MaximusTaurinensisMaximi1962": {},
     "McCormickEmperor2001": {
@@ -107,51 +102,51 @@
         "HalsallBarbarian2007": 0.31766653343919043
     },
     "McCormickEthernal1986": {
-        "PohlIntroduction2018": 0.2567532580781985
+        "PohlIntroduction2018": 0.2568200740257504
     },
     "McKeeUncommon2010": {},
     "MeierAndere2004": {
-        "BellHow2016": 0.32789467695383395,
-        "BratherArchaologie2008": 0.25477833553729723,
-        "CekalovaNika1991": 0.2519604550745175,
-        "DiefenbachFrommigkeit1996": 0.3809135725247705,
-        "MattheisTransformation2014": 0.416496595513535,
-        "Nomen2008": 0.5281051943170024,
-        "PfeilschifterKaiser2013": 0.5080486700461455,
-        "WenskusStammesbildung1961": 0.5945418181094089,
-        "WiemerAkklamationen2004": 0.36361305155130197
+        "BellHow2016": 0.2724459956298425,
+        "BratherArchaologie2008": 0.313581417430464,
+        "CekalovaNika1991": 0.2612645764991311,
+        "DiefenbachFrommigkeit1996": 0.35913034771639796,
+        "MattheisTransformation2014": 0.35002150365369056,
+        "Nomen2008": 0.4462583651152644,
+        "PfeilschifterKaiser2013": 0.514932090629249,
+        "WenskusStammesbildung1961": 0.3729316098788449,
+        "WiemerAkklamationen2004": 0.2979841932222431
     },
     "NagelConstructing1994": {
         "BarthIntroduction1969": 0.6307484794520576,
         "BratherEthnic": 0.38703521549211495
     },
     "Nomen2008": {
-        "BellHow2016": 0.3019732514865131,
-        "BratherArchaologie2008": 0.4051800859370424,
-        "DiefenbachFrommigkeit1996": 0.2916118651739688,
-        "MattheisTransformation2014": 0.3820159820496794,
-        "MeierAndere2004": 0.5281051943170024,
-        "PfeilschifterKaiser2013": 0.4224410370443732,
-        "WenskusStammesbildung1961": 0.6332690748466564,
-        "WiemerAkklamationen2004": 0.335267178782557,
-        "WolframAnfaenge2014": 0.4801462393119548
+        "BellHow2016": 0.26700963410460804,
+        "BratherArchaologie2008": 0.44652243506716427,
+        "DiefenbachFrommigkeit1996": 0.2651238230408309,
+        "MattheisTransformation2014": 0.29262065671456344,
+        "MeierAndere2004": 0.4462583651152644,
+        "PfeilschifterKaiser2013": 0.40874984579682366,
+        "WenskusStammesbildung1961": 0.594564649114119,
+        "WiemerAkklamationen2004": 0.2796385475995283,
+        "WolframAnfaenge2014": 0.4860987738557963
     },
     "ObolenskyCult1974": {},
     "PfeilschifterKaiser2013": {
-        "BellHow2016": 0.29761585998987167,
-        "BratherArchaologie2008": 0.25474220584628676,
-        "CekalovaNika1991": 0.3334017762363641,
-        "DiefenbachFrommigkeit1996": 0.505778753512196,
-        "MattheisTransformation2014": 0.4507871308797938,
-        "MeierAndere2004": 0.5080486700461455,
-        "Nomen2008": 0.4224410370443732,
-        "WenskusStammesbildung1961": 0.38339099817394623,
-        "WiemerAkklamationen2004": 0.4558111759576198,
-        "WolframAnfaenge2014": 0.25592567308480896
+        "BellHow2016": 0.2722332648220578,
+        "BratherArchaologie2008": 0.2557311520518988,
+        "CekalovaNika1991": 0.3254188702951208,
+        "DiefenbachFrommigkeit1996": 0.4901235355107398,
+        "MattheisTransformation2014": 0.43158308239151044,
+        "MeierAndere2004": 0.514932090629249,
+        "Nomen2008": 0.40874984579682366,
+        "WenskusStammesbildung1961": 0.3451836456505249,
+        "WiemerAkklamationen2004": 0.4340779853645173,
+        "WolframAnfaenge2014": 0.258218938540849
     },
     "PohlIntroduction2018": {
         "HalsallBarbarian2007": 0.3008335862861679,
-        "McCormickEthernal1986": 0.2567532580781985
+        "McCormickEthernal1986": 0.2568200740257504
     },
     "RappHoly2005": {},
     "RouecheAcclamations1984": {},
@@ -164,32 +159,27 @@
     },
     "VanNuffelenPlaying2012": {},
     "WenskusStammesbildung1961": {
-        "BellHow2016": 0.2860289965826905,
-        "BratherArchaologie2008": 0.3313206340017608,
-        "DiefenbachFrommigkeit1996": 0.28433116668308756,
-        "MattheisTransformation2014": 0.3135576644631691,
-        "MeierAndere2004": 0.5945418181094089,
-        "Nomen2008": 0.6332690748466564,
-        "PfeilschifterKaiser2013": 0.38339099817394623,
-        "WiemerAkklamationen2004": 0.2767755262714206,
-        "WolframAnfaenge2014": 0.3051833951967965
+        "BratherArchaologie2008": 0.38849719568850144,
+        "MeierAndere2004": 0.3729316098788449,
+        "Nomen2008": 0.594564649114119,
+        "PfeilschifterKaiser2013": 0.3451836456505249,
+        "WolframAnfaenge2014": 0.3558450876128964
     },
     "WhitbyChronicon1989": {
         "GreatrexNika1997": 0.3218500936769458,
-        "JohannesMalalasChronicle2017": 0.3850315453875868
+        "JohannesMalalasChronicle2017": 0.3850316028832749
     },
     "WiemerAkklamationen2004": {
-        "DiefenbachFrommigkeit1996": 0.3475513872534472,
-        "MattheisTransformation2014": 0.3562785647959716,
-        "MeierAndere2004": 0.36361305155130197,
-        "Nomen2008": 0.335267178782557,
-        "PfeilschifterKaiser2013": 0.4558111759576198,
-        "WenskusStammesbildung1961": 0.2767755262714206
+        "DiefenbachFrommigkeit1996": 0.3235366187920916,
+        "MattheisTransformation2014": 0.3146536699770502,
+        "MeierAndere2004": 0.2979841932222431,
+        "Nomen2008": 0.2796385475995283,
+        "PfeilschifterKaiser2013": 0.4340779853645173
     },
     "WolframAnfaenge2014": {
-        "Nomen2008": 0.4801462393119548,
-        "PfeilschifterKaiser2013": 0.25592567308480896,
-        "WenskusStammesbildung1961": 0.3051833951967965
+        "Nomen2008": 0.4860987738557963,
+        "PfeilschifterKaiser2013": 0.258218938540849,
+        "WenskusStammesbildung1961": 0.3558450876128964
     },
     "ZelleZelle": {}
 }
